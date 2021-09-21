@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Astronomy PIcture of the Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CSS Styles -->
+    <!-- Loader -->
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== LOADER ===== -->
+    <!-- Credit: Niyaz Poyilan -->
+    <!-- https://codepen.io/niyazpoyilan/pen/PGQKZK -->
+    <div class="loader-wrapper hidden">
+        <div class="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+    <!-- Container -->
+    <section id="section">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="NASA logo" width="100px" height="auto">
+                <div>
+                    <h1>Astronomy</h1>
+                    <p>Picture of the Day</p>
+                </div>
+            </div>
+            <div class="no-faves-text">
+                <h1>No favorites saved yet!<h1>
+                <h2>Save your favorite images using the star button below the image descriptions.</h2>
+            </div>
+            <!-- Navigation -->
+            <div class="navigation-container">
+                <!-- <span class="background"></span> -->
+                <!-- Results Nav -->
+                <span class="navigation-items" id="resultsNav">
+                    <h3 class="footer-btn faves-btn" onclick="updateDOM('favorites')">View Favorites </h3>
+                    <span class="divider">|</span>
+                    <h3 class="footer-btn next-btn" onclick="getNasaPictures()">Next Image</h3>
+                </span>
+                <!-- Favourites Nav -->
+                <span class="navigation-items hidden" id="favoritesNav">
+                    <!-- UPDATE THE BUTTON BELOW  -->
+                    <h3 class="footer-btn back-to-btn" onclick="location.reload();">Search New Image</h3>
+                </span>
+            </div>
+
+            <!-- Overlay -->
+            <div id="overlay" class="overlay">
+                <!-- View Full Link -->
+                <div class="full-screen-container"></div>
+            </div>
+
+            <!-- Images Container -->
+            <div class="images-container">
+                
+            </div>
+
+        </div>
+        <!-- Save Confirmation -->
+        <div class="save-confirmed" hidden>
+            <h1>Added to Favorites!</h1>
+        </div>
+        <!-- Save Confirmation -->
+        <div class="delete-confirmed" hidden>
+            <h1>Deleted from Favorites!</h1>
+        </div>
+    </section>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
